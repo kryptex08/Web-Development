@@ -1,0 +1,4 @@
+.header_wrapper header{
+    width: 100%;
+    background:url("bg.jpeg") no-repeat 50% 20% / cover;
+}
