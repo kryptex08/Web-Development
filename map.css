@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+      position: relative;
+}
+.h1{
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px black;
+    position: fixed;
+}
+.container{
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+}
+.container img{
+    width: 100%;
+}
+.location{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.location:hover {
+    transform: scale(1.5);
+    background-color: red;
+}
+.WG{
+    top: 60%;
+    left: 23%;
+}
+.Rajasthan{
+    top: 30%;
+    left: 27%;
+}
+.Chhattisgarh{
+    top: 45%;
+    left: 50%;
+}
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transform: translate(-50%, -150%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+  .location:hover .tooltip{
+    opacity: 1;
+}
