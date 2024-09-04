@@ -1,59 +1,154 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 96vh;
     margin: 0;
     padding: 15px;
-    /* background-color: black; */
     font-family: Arial, sans-serif;
-    /* border: 4px solid white; */
 }
-#postcontainer{
+
+#postcontainer {
     width: 100%;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0,1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
+    position: relative; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-#profileHeader{
+
+#profileHeader {
     display: flex;
     align-items: center;
     padding: 16px;
     border-bottom: 1px solid #ddd;
+    position: relative;
 }
-#profileimg{
+
+#profileimg {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 16px;
 }
-#profileInfo{
+
+#profileInfo {
     flex-grow: 1;
 }
-#profilename{
+
+#profilename {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
 }
-#postTime{
+
+#follow {
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#follow:hover {
+    background-color: red;
+}
+#three-dot{
+    padding: 10px;
+}
+
+#postTime {
     color: #888;
     font-size: 14px;
 }
-#postContent{
+
+#postImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#postContent {
     padding: 16px;
     font-size: 16px;
     line-height: 1.5;
 }
-/* #imagecontainer img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
+#postTextContainer {
+    display: flex;
+    align-items: center;
 }
-#timecontainer{
-    margin-top: 20px;
+.tags{
+    padding-left: 10px;
+}
+.tags a {
+    color: #0095f6;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.tags a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+#nameinpost{
+    margin-right: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#interactionBar {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    padding: 12px;
+    border-top: 1px solid black;
+    background-color: #fafafa;
+}
+
+#interactionBar button {
+    background: none;
+    border: none;
     font-size: 24px;
-    color: white;
-} */
+    cursor: pointer;
+    color: #333;
+    margin-right: 16px; 
+    display: flex;
+    align-items: center;
+}
+#interactionBar .count{
+    margin-left: 8px;
+    font-size: 16px;
+}
+#interactionBar .like:hover {
+    color: #e1306c;
+}
+
+#interactionBar .comment:hover {
+    color: #0095f6;
+}
+
+#interactionBar .share:hover {
+    color: red;
+}
+
+#saveButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #eee;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+#saveButton:hover {
+    background-color: #ddd;
+}

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media WebPage</title>
     <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="postcontainer">
@@ -14,10 +17,28 @@
                 <h2 id="profilename">Kryptex FF</h2>
                 <span id="postTime">Just Now</span>
             </div>
+            <button id="follow">Follow</button>
+            <span id="three-dot"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+        </div>
+        <div id="postImage">
+            <img src="gs2djea8_ms-dhoni-new-look-instagram_625x300_30_July_21.jpg" alt="Msdhoni">
         </div>
         <div id="postContent">
-            <p>Example Post</p>        
+            <div id="postTextContainer">
+            <h3 id="nameinpost">Kryptex FF</h3>
+            <p>New Haircut!!</p>
+            <p class="tags">
+                <a href="#">#NewStyle</a>
+                <a href="#">#MSD</a>  
+            </p>
+        </div>      
         </div>
+        <div id="interactionBar">
+            <button class="like"><i class="fa-solid fa-heart"></i> <span class="count">13.2M</span></button>
+            <button class="comment"><i class="fa-solid fa-comment"></i> <span class="count">123K</span></button>
+            <button class="share"><i class="fa-solid fa-share"></i> <span class="count">196k</span></button>
+        </div>
+        <button id="saveButton"><i class="fa-regular fa-bookmark"></i></button>
     </div>
     <script src="social.js"></script>
 </body>
