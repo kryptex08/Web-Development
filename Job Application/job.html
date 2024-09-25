@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB APPLICATION FORM</title>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form id="job">
+        <h2>Personal Information</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br>
+
+        <h2>Job Information</h2>
+        <label for="position">Position Applied for:</label>
+        <!-- <input type="text" id="Position" name="position" required><br> -->
+        <select id="position" name="position">
+            <option value="HR">HR</option>
+            <option value="Manager">Manager</option>
+            <option value="Clerk">Clerk</option>
+        </select><br>
+
+        <label for="start-date">Available date to start:</label>
+        <input type="date" id="start-date" name="start-date" required><br>
+
+    </form>
+</body>
+</html>
