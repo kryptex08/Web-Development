@@ -1,0 +1,28 @@
+body{
+ background-color: black;
+ color: white;
+}
+#text{
+    text-align: center;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}   
+#change{
+    width: 500px;
+    height: 500px;
+    border:2px solid white;
+    overflow: hidden;
+}
+#profileimg{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    object-fit: cover;
+}
+/* @keyframes color{
+    from{background-image: url('sachin-records.png');}
+    to{background-image:url('MS.jpg');}
+} */
