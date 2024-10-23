@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.counts, .timer {
+    display: flex;
+    align-items: center;
+}
+#container-q {
+    margin-bottom: 20px;
+}

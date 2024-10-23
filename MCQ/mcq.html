@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <link rel="stylesheet" href="mcq.css">
+    <style src="mcq.js"></style>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="counts">
+                <span class="number">1 of 2 Questions</span>
+            </div>
+            <div class="timer">
+                <img src="timer-icon.png">
+                <span class="time-left">10s</span>
+            </div>
+        </div>                                                
+        <div id="container-q">
+            <form id="quiz-form">
+                <div class="Questions" id="question1">
+                <p>1.Who is the Greateset Captain of India??</p>
+                <input type="radio" id="MS" name="captains" value="MS">
+                <label for="MS">MS Dhoni</label><br>
+                <input type="radio" id="Rohit" name="captains" value="Rohit">
+                <label for="Rohit">Rohit Sharma</label><br>
+                <input type="radio" id="Virat" name="captains" value="Virat">
+                <label for="Virat">Virat Kohli</label><br>
+                <input type="radio" id="Ganguly" name="captains" value="Ganguly">
+                <label for="Ganguly">Sourav Ganguly</label>
+                </div>
+
+                <div class="Questions" id="question2">
+                    <p>2.Who among has the highest score in an ODI Innings?</p>
+                    <input type="radio" id="Rohit1" name="highest" value="Rohit1">
+                    <label for="Rohit1">Rohit Sharma</label><br>
+                    <input type="radio" id="Guptill" name="highest" value="Guptill">
+                    <label for="Guptill">Martin Guptill</label><br>
+                    <input type="radio" id="Gayle" name="highest" value="Gayle">
+                    <label for="Gayle">Chris Gayle</label><br>
+                    <input type="radio" id="Sehwag" name="highest" value="Sehwag">
+                    <label for="Sehwag">Virendar Sehwag</label>
+                 </div>
+            </form>
+        </div>
+        <button id="next">Next</button>
+    </div>
+</body>
+</html>
