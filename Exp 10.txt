@@ -1,0 +1,72 @@
+CREATE DATABASE StudentDB;
+
+USE StudentDB;
+
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    marks INT NOT NULL
+);
+
+INSERT INTO students (name, marks) VALUES ('Alice', 85), ('Bob', 90), ('Charlie', 75);
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.sql.*;
+
+public class StudentDatabaseApp extends JFrame {
+    private DefaultTableModel tableModel;
+
+    // Database connection variables
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/StudentDB";
+    private static final String DB_USERNAME = "root";
+    private static final String DB_PASSWORD = "password";
+
+    public StudentDatabaseApp() {
+        setTitle("Student Management System");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Table to display students
+        String[] columnNames = {"ID", "Name", "Marks"};
+        tableModel = new DefaultTableModel(columnNames, 0);
+        JTable table = new JTable(tableModel);
+        JScrollPane tableScrollPane = new JScrollPane(table);
+
+        add(tableScrollPane, BorderLayout.CENTER);
+
+        // Load data from database
+        loadStudentData();
+    }
+
+    private void loadStudentData() {
+        try (Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM students")) {
+
+            // Clear any existing rows in the table
+            tableModel.setRowCount(0);
+
+            // Add rows from database
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                int marks = rs.getInt("marks");
+                tableModel.addRow(new Object[]{id, name, marks});
+            }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error connecting to the database.", "Database Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            StudentDatabaseApp app = new StudentDatabaseApp();
+            app.setVisible(true);
+        });
+    }
+}

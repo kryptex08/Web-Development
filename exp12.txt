@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enhanced Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Enhanced Webpage</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home Section</h2>
+        <p>This is the home section of the webpage. Enjoy your stay!</p>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message" style="display:none;"></p>
+    </section>
+
+    <section id="about">
+        <h2>About Section</h2>
+        <p>This section contains information about the webpage and its purpose. It's designed to give you a brief overview.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Section</h2>
+        <p>If you would like to get in touch, please send an email to: <a href="mailto:example@example.com">example@example.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Enhanced Webpage</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = "Hello! Thanks for clicking the button.";
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
